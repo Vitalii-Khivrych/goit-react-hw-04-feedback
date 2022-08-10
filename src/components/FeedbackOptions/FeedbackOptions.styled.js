@@ -1,10 +1,12 @@
-.wrap {
+import styled from 'styled-components';
+
+export const OptionsWrap = styled.div`
   display: flex;
   align-content: center;
   justify-content: space-around;
-}
+`;
 
-.btn {
+export const OptionsButton = styled.button`
   font-size: 16px;
   font-weight: 500;
   padding: 7px;
@@ -15,9 +17,9 @@
     0px 2px 1px rgb(0 0 0 / 20%);
   color: rgb(29, 45, 39);
   transition: transform 0.4s;
-}
 
-.btn:hover {
-  transform: scale(1.2);
-  background-color: teal;
-}
+  :hover {
+    transform: scale(1.2);
+    background-color: teal;
+  }
+`;

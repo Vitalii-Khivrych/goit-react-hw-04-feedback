@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import s from './Notification.module.css';
+import styled from 'styled-components';
 
 function Notification({ message }) {
   return (
     <>
-      <p className={s.text}>{message}</p>
+      <Text>{message}</Text>
     </>
   );
 }
@@ -14,3 +14,8 @@ Notification.propTypes = {
 };
 
 export default Notification;
+
+const Text = styled.p`
+  font-size: 20px;
+  text-align: center;
+`;

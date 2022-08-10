@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import s from './Statistics.module.css';
+import styled from 'styled-components';
 
 function Statistics({ good, neutral, bad, total, positivePercentage }) {
   return (
     <div>
-      <p className={s.text}>Good: {good}</p>
-      <p className={s.text}>Neutral: {neutral}</p>
-      <p className={s.text}>Bad: {bad}</p>
-      <p className={s.text}>Total: {total}</p>
-      <p className={s.text}>Positive feedback: {`${positivePercentage}%`}</p>
+      <Text>Good: {good}</Text>
+      <Text>Neutral: {neutral}</Text>
+      <Text>Bad: {bad}</Text>
+      <Text>Total: {total}</Text>
+      <Text>Positive feedback: {`${positivePercentage}%`}</Text>
     </div>
   );
 }
@@ -22,3 +22,12 @@ Statistics.propTypes = {
 };
 
 export default Statistics;
+
+const Text = styled.p`
+  font-size: 16px;
+  font-weight: 500;
+
+  :not(:last-child) {
+    margin-bottom: 8px;
+  }
+`;

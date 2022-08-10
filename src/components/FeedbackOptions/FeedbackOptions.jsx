@@ -1,21 +1,20 @@
 import PropTypes from 'prop-types';
-import s from './FeedbackOptions.module.css';
+import { OptionsWrap, OptionsButton } from './FeedbackOptions.styled';
 
 function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <div className={s.wrap}>
+    <OptionsWrap>
       {options.map(option => (
-        <button
+        <OptionsButton
           key={option}
-          className={s.btn}
           type="button"
           name={option}
           onClick={onLeaveFeedback}
         >
           {option}
-        </button>
+        </OptionsButton>
       ))}
-    </div>
+    </OptionsWrap>
   );
 }
 
@@ -24,9 +23,3 @@ FeedbackOptions.propTypes = {
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 export default FeedbackOptions;
-
-//    <button
-//   className={s.btn}
-//   type="button"
-//     onClick={() => onLeaveFeedback('bad')}>Bad
-// </button>;
